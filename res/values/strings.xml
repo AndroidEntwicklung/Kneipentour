@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Kneipentour</string>
+    <string name="action_settings">Settings</string>
+    <string name="enter_search">Geben Sie Suchkriterien ein:</string>
+    <string name="enter_city">Ort</string>
+    <string name="enter_type">Typ</string>
+    <string name="enter_button">Suchen</string>
+    <string name="title_activity_detail_liste">DetailListe</string>
+    <string name="hello_world">Hello world!</string>
+
+	<string-array name="type_array">
+		<item>Restaurant</item>
+		<item>Bar</item>
+		<item>Kiosk</item>
+		<item>Kneipe</item>
+		<item>Café</item>
+	</string-array>
+
+</resources>
