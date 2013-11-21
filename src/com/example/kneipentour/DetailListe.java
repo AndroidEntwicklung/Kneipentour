@@ -10,6 +10,24 @@ public class DetailListe extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_detail_liste);
+		
+        String search_type;
+        String search_city;
+        
+        if (savedInstanceState == null) {
+            Bundle extras = getIntent().getExtras();
+            
+            if (extras == null) {
+            	search_type = "";
+            	search_city = "";
+            } else {
+            	search_type= extras.getString("search_type");
+            	search_city = extras.getString("search_city");
+            }
+        } else {
+        	search_type = (String) savedInstanceState.getSerializable("search_type");
+        	search_city = (String) savedInstanceState.getSerializable("search_city");
+        }
 	}
 
 	@Override

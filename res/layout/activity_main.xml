@@ -14,57 +14,58 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="30sp"        
-        android:text="@string/enter_search" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:textSize="30sp"
-        android:text="@string/enter_city" />
-
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:singleLine="true" >
-
-        <requestFocus />
-    </EditText>
+        android:text="@string/enter_search"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34dp"
-        android:textSize="30sp"
-        android:text="@string/enter_type" />
+        android:text="@string/enter_type"
+        android:textSize="30sp" />
 
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <LinearLayout
-        android:layout_width="572dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="500dp"
-        android:gravity="center"
-        android:orientation="vertical" >
+        android:layout_marginTop="15dp" />
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/enter_city"
+        android:textSize="30sp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        
         <Button
             android:id="@+id/button1"
-            android:layout_width="200dp"
-            android:layout_height="0dip"
-            android:layout_marginTop="0dp"
-            android:layout_weight="1.18"
-            android:textSize="30sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
             android:text="@string/enter_button" />
-    </LinearLayout>
+        
+        <EditText
+            android:id="@+id/edittext1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text|textFilter"
+            android:singleLine="true" 
+            android:layout_toLeftOf="@id/button1"
+            android:layout_marginTop="8dp">
+
+            <requestFocus />
+        </EditText>
+
+
+
+    </RelativeLayout>
 
 </LinearLayout>
