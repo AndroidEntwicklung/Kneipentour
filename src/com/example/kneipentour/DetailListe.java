@@ -3,6 +3,7 @@ package com.example.kneipentour;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.TextView;
 
 public class DetailListe extends Activity {
 
@@ -10,6 +11,8 @@ public class DetailListe extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_detail_liste);
+		
+		TextView textview = (TextView) findViewById(R.id.textview4);
 		
         String search_type;
         String search_city;
@@ -28,6 +31,8 @@ public class DetailListe extends Activity {
         	search_type = (String) savedInstanceState.getSerializable("search_type");
         	search_city = (String) savedInstanceState.getSerializable("search_city");
         }
+        
+        textview.setText(search_city);
 	}
 
 	@Override

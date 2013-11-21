@@ -1,8 +1,10 @@
 package com.example.kneipentour;
 
 import android.os.Bundle;
+import android.os.Trace;
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -19,7 +21,7 @@ public class MainActivity extends Activity {
 
         final Button button = (Button) findViewById(R.id.button1);
         final Spinner spinner = (Spinner) findViewById(R.id.spinner1);
-        final EditText textview = (EditText) findViewById(R.id.edittext1);
+        final EditText edittext = (EditText) findViewById(R.id.edittext1);
         
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.type_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -29,9 +31,9 @@ public class MainActivity extends Activity {
         button.setOnClickListener(new Button.OnClickListener() { 
         	public void onClick(View view) {
                 Intent myIntent = new Intent(view.getContext(), DetailListe.class);
-                startActivityForResult(myIntent, 0);
                 myIntent.putExtra("search_type", spinner.getSelectedItem().toString());
-                myIntent.putExtra("search_city", textview.getText());
+                myIntent.putExtra("search_city", edittext.getText().toString());
+                startActivity(myIntent);
         	}
         });
 	}
