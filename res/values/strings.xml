@@ -17,5 +17,6 @@
 		<item>Kneipe</item>
 		<item>Café</item>
 	</string-array>
+	<string name="title_activity_kneipen_list">KneipenList</string>
 
 </resources>

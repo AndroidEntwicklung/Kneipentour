@@ -1,6 +1,6 @@
 package com.example.kneipentour;
 
-public class KneipenItem {
+public class KneipenListItem {
 private String name;
 private String street;
 private String distance;
