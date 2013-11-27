@@ -1,10 +1,8 @@
 package com.example.kneipentour;
 
 import android.os.Bundle;
-import android.os.Trace;
 import android.app.Activity;
 import android.content.Intent;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -30,7 +28,7 @@ public class MainActivity extends Activity {
                 
         button.setOnClickListener(new Button.OnClickListener() { 
         	public void onClick(View view) {
-                Intent myIntent = new Intent(view.getContext(), DetailListe.class);
+                Intent myIntent = new Intent(view.getContext(), KneipenListActivity.class);
                 myIntent.putExtra("search_type", spinner.getSelectedItem().toString());
                 myIntent.putExtra("search_city", edittext.getText().toString());
                 startActivity(myIntent);
