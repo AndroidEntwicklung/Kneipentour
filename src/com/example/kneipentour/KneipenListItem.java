@@ -1,90 +1,92 @@
 package com.example.kneipentour;
 
 public class KneipenListItem {
-private String name;
-private String street;
-private String city;
-private String type;
-private int rating;
-private String review;
-private String distance;
-private String iconpath;
+	private String name;
+	private String street;
+	private String city;
+	private String type;
+	private int rating;
+	private String review;
+	private String distance;
+	private String iconpath;
+	private String imagepath;
 
-public String getName()
-{
-	return name;
-}
-public void setName(String _name)
-{
-	this.name = _name;
-}
+	public String getName() {
+		return name;
+	}
 
-public String getStreet()
-{
-	return street;
-}
-public void setStreet(String _street)
-{
-	this.street = _street;
-}
+	public void setName(String _name) {
+		this.name = _name;
+	}
 
-public String getCity()
-{
-	return city;
-}
-public void setCity(String _city)
-{
-	this.city = _city;
-}
+	public String getStreet() {
+		return street;
+	}
 
-public String getType()
-{
-	return type;
-}
-public void setType(String _type)
-{
-	this.type = _type;
-}
+	public void setStreet(String _street) {
+		this.street = _street;
+	}
 
-public int getRating()
-{
-	return rating;
-}
-public void setRating(int _rating)
-{
-	this.rating = _rating;
-}
+	public String getCity() {
+		return city;
+	}
 
-public String getReview()
-{
-	return review;
-}
-public void setReview(String _review)
-{
-	this.review = _review;
-}
+	public void setCity(String _city) {
+		this.city = _city;
+	}
 
-public String getDistance()
-{
-	return distance;
-}
-public void setDistance(String _distance)
-{
-	this.distance = _distance;
-}
+	public String getType() {
+		return type;
+	}
 
-public String getIconpath()
-{
-	return iconpath;
-}
-public void setIconpath(String _iconpath)
-{
-	this.iconpath = _iconpath;
-}
+	public void setType(String _type) {
+		this.type = _type;
+	}
 
-@Override
-public String toString()
-{
-	return "[ name=" + name + ", street=" + street + ", distance=" + distance + ", iconpath=" + iconpath + "]";
-} 
+	public int getRating() {
+		return rating;
+	}
+
+	public void setRating(int _rating) {
+		this.rating = _rating;
+	}
+
+	public String getReview() {
+		return review;
+	}
+
+	public void setReview(String _review) {
+		this.review = _review;
+	}
+
+	public String getDistance() {
+		return distance;
+	}
+
+	public void setDistance(String _distance) {
+		this.distance = _distance;
+	}
+
+	public String getIconpath() {
+		return iconpath;
+	}
+
+	public void setIconpath(String _iconpath) {
+		this.iconpath = _iconpath;
+	}
+
+	public String getImagepath() {
+		return imagepath;
+	}
+
+	public void setImagepath(String _imagepath) {
+		this.imagepath = _imagepath;
+	}
+
+	@Override
+	public String toString() {
+		return "[ name=" + name + ", street=" + street + ", distance="
+				+ distance + ", iconpath=" + iconpath + "]";
+	}
+
 }

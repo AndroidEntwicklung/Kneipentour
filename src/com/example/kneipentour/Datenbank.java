@@ -15,6 +15,7 @@ public class Datenbank {
 		kneipenData.setRating(3);
 		kneipenData.setReview("Jo passt scho");
 		kneipenData.setIconpath("bla");
+		kneipenData.setImagepath("http://www.nachtkultur.info/locations/bilder/211_1_1321753448.jpg");
 		zwresults.add(kneipenData);
 		
 		kneipenData = new KneipenListItem();
@@ -26,6 +27,7 @@ public class Datenbank {
 		kneipenData.setRating(2);
 		kneipenData.setReview("Naja scho net schlecht");
 		kneipenData.setIconpath("blab");
+		kneipenData.setImagepath("http://mw2.google.com/mw-panoramio/photos/thumbnail/74039039.jpg");
 		zwresults.add(kneipenData);
 		
 		kneipenData = new KneipenListItem();
@@ -37,17 +39,26 @@ public class Datenbank {
 		kneipenData.setRating(2);
 		kneipenData.setReview("Omnomnom");
 		kneipenData.setIconpath("blab");
+		kneipenData.setImagepath("http://www.fuerstenberg.de/media.php/gastrofuehrer/2009/Waldrast_78147.jpg");
 		zwresults.add(kneipenData);
-		
+
 		for (KneipenListItem data: zwresults)
 		{
-			if (data.getCity().equalsIgnoreCase(city) && data.getType().equalsIgnoreCase(type))
+			if (data.getName().equalsIgnoreCase(name) && !name.isEmpty())
 			{
 				results.add(data);
+				break;
 			}
-			else if (city.isEmpty() && data.getType().equalsIgnoreCase(type))
+			if (name.isEmpty())
 			{
-				results.add(data);
+				if (data.getCity().equalsIgnoreCase(city) && data.getType().equalsIgnoreCase(type))
+				{
+					results.add(data);
+				}
+				else if (city.isEmpty() && data.getType().equalsIgnoreCase(type))
+				{
+					results.add(data);
+				}
 			}
 		}
 		kneipenData = new KneipenListItem();
