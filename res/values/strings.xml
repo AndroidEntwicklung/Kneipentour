@@ -9,13 +9,15 @@
     <string name="enter_button">Suchen</string>
     <string name="title_activity_detail_liste">DetailListe</string>
     <string name="hello_world">Hello world!</string>
+    <string name="search_results">Suchergebnisse</string>
 
 	<string-array name="type_array">
-		<item>Restaurant</item>
-		<item>Bar</item>
-		<item>Kiosk</item>
-		<item>Kneipe</item>
-		<item>Café</item>
+	    <item />
+		<item>Restaurants</item>
+		<item>Bars</item>
+		<item>Kioske</item>
+		<item>Kneipen</item>
+		<item>Cafés</item>
 	</string-array>
 	<string name="title_activity_kneipen_list">KneipenList</string>
 

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class KneipenListActivity extends Activity {
@@ -35,9 +36,20 @@ public class KneipenListActivity extends Activity {
             search_type = (String) savedInstanceState.getSerializable("search_type");
             search_city = (String) savedInstanceState.getSerializable("search_city");
         }
-
+        
+        // text
+        TextView tview = (TextView) findViewById(R.id.sr_tv);
+        
+        String filterType = (search_type.isEmpty()) ? "alle" : search_type;
+        
+        if (search_city.isEmpty())
+        	tview.setText("Suchergebnisse (" + filterType + "):");
+        else
+        	tview.setText(filterType + " in " + search_city + ":");
+        
+        // list
         Datenbank localDB = new Datenbank();
-		ArrayList<KneipenListItem> image_details = localDB.getListData(null,search_type,search_city);
+		ArrayList<KneipenListItem> image_details = localDB.getListData("",search_type,search_city);
 		
 		final ListView lv1 = (ListView) findViewById(R.id.kneipen_list);
 		lv1.setAdapter(new KneipenListAdapter(this, image_details));

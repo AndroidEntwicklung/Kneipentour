@@ -8,7 +8,7 @@ public class KneipenListItem {
 	private int rating;
 	private String review;
 	private String distance;
-	private String iconpath;
+	private int iconpath;
 	private String imagepath;
 
 	public String getName() {
@@ -67,11 +67,11 @@ public class KneipenListItem {
 		this.distance = _distance;
 	}
 
-	public String getIconpath() {
+	public int getIconpath() {
 		return iconpath;
 	}
 
-	public void setIconpath(String _iconpath) {
+	public void setIconpath(int _iconpath) {
 		this.iconpath = _iconpath;
 	}
 

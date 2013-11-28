@@ -53,9 +53,9 @@ public class KneipenListAdapter extends BaseAdapter {
 		}
 		
 		holder.titleView.setText(listData.get(position).getName());
-		holder.streetView.setText(listData.get(position).getStreet());
+		holder.streetView.setText(listData.get(position).getStreet() + ", " + listData.get(position).getCity());
 		holder.distanceView.setText(listData.get(position).getDistance());
-		holder.iconView.setImageResource(R.id.icon);
+		holder.iconView.setImageResource(listData.get(position).getIconpath());
 		
 		return convertView;
 	}
