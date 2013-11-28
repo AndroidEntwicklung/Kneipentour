@@ -38,7 +38,7 @@ public class KneipenListActivity extends Activity {
         }
 
         Datenbank localDB = new Datenbank();
-		ArrayList<KneipenListItem> image_details = localDB.getListData();
+		ArrayList<KneipenListItem> image_details = localDB.getListData(null,search_type,search_city);
 		
 		final ListView lv1 = (ListView) findViewById(R.id.kneipen_list);
 		lv1.setAdapter(new KneipenListAdapter(this, image_details));
