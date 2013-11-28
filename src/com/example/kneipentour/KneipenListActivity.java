@@ -37,7 +37,8 @@ public class KneipenListActivity extends Activity {
             search_city = (String) savedInstanceState.getSerializable("search_city");
         }
 
-		ArrayList<KneipenListItem> image_details = getListData();
+        Datenbank localDB = new Datenbank();
+		ArrayList<KneipenListItem> image_details = localDB.getListData();
 		
 		final ListView lv1 = (ListView) findViewById(R.id.kneipen_list);
 		lv1.setAdapter(new KneipenListAdapter(this, image_details));
@@ -55,24 +56,5 @@ public class KneipenListActivity extends Activity {
                 }
             }
         );
-	}
-
-	private ArrayList<KneipenListItem> getListData() {
-		ArrayList<KneipenListItem> results = new ArrayList<KneipenListItem>();
-		KneipenListItem kneipenData = new KneipenListItem();
-		kneipenData.setName("Faerbe");
-		kneipenData.setStreet("Irgendwo 15");
-		kneipenData.setDistance("netSoWeit");
-		kneipenData.setIconpath("bla");
-		results.add(kneipenData);
-		
-		kneipenData = new KneipenListItem();
-		kneipenData.setName("Speicher");
-		kneipenData.setStreet("GHB halt");
-		kneipenData.setDistance("dBuckelNuff");
-		kneipenData.setIconpath("blab");
-		results.add(kneipenData);
-		
-		return results;
 	}
 }
