@@ -7,7 +7,7 @@ private String city;
 private String type;
 private int rating;
 private String review;
-private int distance;
+private String distance;
 private String iconpath;
 
 public String getName()
@@ -64,11 +64,11 @@ public void setReview(String _review)
 	this.review = _review;
 }
 
-public int getDistance()
+public String getDistance()
 {
 	return distance;
 }
-public void setDistance(int _distance)
+public void setDistance(String _distance)
 {
 	this.distance = _distance;
 }
