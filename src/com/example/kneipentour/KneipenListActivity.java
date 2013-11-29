@@ -12,7 +12,7 @@ import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 
 public class KneipenListActivity extends Activity {
-
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState)
 	{
@@ -51,6 +51,17 @@ public class KneipenListActivity extends Activity {
         Datenbank localDB = new Datenbank();
 		ArrayList<KneipenListItem> image_details = localDB.getListData("",search_type,search_city);
 		
+		TextView noresult_error = (TextView) findViewById(R.id.noresult_error);
+		
+		if (image_details.size() == 0)
+		{
+			noresult_error.setVisibility(View.VISIBLE);
+		}
+		else
+		{
+			noresult_error.setVisibility(View.GONE);
+		}
+
 		final ListView lv1 = (ListView) findViewById(R.id.kneipen_list);
 		lv1.setAdapter(new KneipenListAdapter(this, image_details));
             lv1.setOnItemClickListener(new OnItemClickListener() {

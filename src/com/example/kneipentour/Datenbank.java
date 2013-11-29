@@ -52,13 +52,13 @@ public class Datenbank {
 			}
 			if (name.isEmpty())
 			{
-				// city + type
-				if (data.getCity().equalsIgnoreCase(city) && data.getType().equalsIgnoreCase(type))
+				// city + type (+ nasty substring hack)
+				if (!type.isEmpty() && data.getCity().equalsIgnoreCase(city) && data.getType().equalsIgnoreCase(type.substring(0, type.length()-1)))
 				{
 					results.add(data);
 				}
 				// only type
-				else if (city.isEmpty() && data.getType().equalsIgnoreCase(type))
+				else if (!type.isEmpty() && city.isEmpty() && data.getType().equalsIgnoreCase(type.substring(0, type.length()-1)))
 				{
 					results.add(data);
 				}
@@ -85,7 +85,7 @@ public class Datenbank {
 			kneipenData.setDistance("");
 			kneipenData.setRating(0);
 			kneipenData.setReview("");
-			kneipenData.setIconpath("");
+			kneipenData.setIconpath(R.drawable.p_restaurant);
 			results.add(kneipenData);
 		*/
 		

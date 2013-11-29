@@ -12,6 +12,14 @@
         android:text="@string/search_results"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <TextView 
+        android:id="@+id/noresult_error"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Keine Ergebnisse gefunden!"
+        android:textColor="#cc0000"
+        android:visibility="gone" />
+    
     <ListView
         android:id="@+id/kneipen_list"
         android:layout_width="fill_parent"
